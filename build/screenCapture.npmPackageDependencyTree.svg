@@ -1,0 +1,96 @@
+<svg height="1486" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="1486" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26">└─┬ riot@3.4.0 </tspan>
+<tspan x="10" y="42">  ├─┬ riot-cli@3.0.0 </tspan>
+<tspan x="10" y="58">  │ ├─┬ chalk@1.1.3 </tspan>
+<tspan x="10" y="74">  │ │ ├── ansi-styles@2.2.1 </tspan>
+<tspan x="10" y="90">  │ │ ├── escape-string-regexp@1.0.5 </tspan>
+<tspan x="10" y="106">  │ │ ├─┬ has-ansi@2.0.0 </tspan>
+<tspan x="10" y="122">  │ │ │ └── ansi-regex@2.1.1 </tspan>
+<tspan x="10" y="138">  │ │ ├── strip-ansi@3.0.1 </tspan>
+<tspan x="10" y="154">  │ │ └── supports-color@2.0.0 </tspan>
+<tspan x="10" y="170">  │ ├─┬ chokidar@1.6.1 </tspan>
+<tspan x="10" y="186">  │ │ ├─┬ anymatch@1.3.0 </tspan>
+<tspan x="10" y="202">  │ │ │ ├── arrify@1.0.1 </tspan>
+<tspan x="10" y="218">  │ │ │ └─┬ micromatch@2.3.11 </tspan>
+<tspan x="10" y="234">  │ │ │   ├─┬ arr-diff@2.0.0 </tspan>
+<tspan x="10" y="250">  │ │ │   │ └── arr-flatten@1.0.1 </tspan>
+<tspan x="10" y="266">  │ │ │   ├── array-unique@0.2.1 </tspan>
+<tspan x="10" y="282">  │ │ │   ├─┬ braces@1.8.5 </tspan>
+<tspan x="10" y="298">  │ │ │   │ ├─┬ expand-range@1.8.2 </tspan>
+<tspan x="10" y="314">  │ │ │   │ │ └─┬ fill-range@2.2.3 </tspan>
+<tspan x="10" y="330">  │ │ │   │ │   ├── is-number@2.1.0 </tspan>
+<tspan x="10" y="346">  │ │ │   │ │   ├── isobject@2.1.0 </tspan>
+<tspan x="10" y="362">  │ │ │   │ │   ├── randomatic@1.1.6 </tspan>
+<tspan x="10" y="378">  │ │ │   │ │   └── repeat-string@1.6.1 </tspan>
+<tspan x="10" y="394">  │ │ │   │ ├── preserve@0.2.0 </tspan>
+<tspan x="10" y="410">  │ │ │   │ └── repeat-element@1.1.2 </tspan>
+<tspan x="10" y="426">  │ │ │   ├─┬ expand-brackets@0.1.5 </tspan>
+<tspan x="10" y="442">  │ │ │   │ └── is-posix-bracket@0.1.1 </tspan>
+<tspan x="10" y="458">  │ │ │   ├── extglob@0.3.2 </tspan>
+<tspan x="10" y="474">  │ │ │   ├── filename-regex@2.0.0 </tspan>
+<tspan x="10" y="490">  │ │ │   ├─┬ kind-of@3.1.0 </tspan>
+<tspan x="10" y="506">  │ │ │   │ └── is-buffer@1.1.5 </tspan>
+<tspan x="10" y="522">  │ │ │   ├─┬ normalize-path@2.1.1 </tspan>
+<tspan x="10" y="538">  │ │ │   │ └── remove-trailing-separator@1.0.1 </tspan>
+<tspan x="10" y="554">  │ │ │   ├─┬ object.omit@2.0.1 </tspan>
+<tspan x="10" y="570">  │ │ │   │ ├─┬ for-own@0.1.5 </tspan>
+<tspan x="10" y="586">  │ │ │   │ │ └── for-in@1.0.2 </tspan>
+<tspan x="10" y="602">  │ │ │   │ └── is-extendable@0.1.1 </tspan>
+<tspan x="10" y="618">  │ │ │   ├─┬ parse-glob@3.0.4 </tspan>
+<tspan x="10" y="634">  │ │ │   │ ├── glob-base@0.3.0 </tspan>
+<tspan x="10" y="650">  │ │ │   │ └── is-dotfile@1.0.2 </tspan>
+<tspan x="10" y="666">  │ │ │   └─┬ regex-cache@0.4.3 </tspan>
+<tspan x="10" y="682">  │ │ │     ├── is-equal-shallow@0.1.3 </tspan>
+<tspan x="10" y="698">  │ │ │     └── is-primitive@2.0.0 </tspan>
+<tspan x="10" y="714">  │ │ ├── async-each@1.0.1 </tspan>
+<tspan x="10" y="730">  │ │ ├── glob-parent@2.0.0 </tspan>
+<tspan x="10" y="746">  │ │ ├── inherits@2.0.3 </tspan>
+<tspan x="10" y="762">  │ │ ├─┬ is-binary-path@1.0.1 </tspan>
+<tspan x="10" y="778">  │ │ │ └── binary-extensions@1.8.0 </tspan>
+<tspan x="10" y="794">  │ │ ├─┬ is-glob@2.0.1 </tspan>
+<tspan x="10" y="810">  │ │ │ └── is-extglob@1.0.0 </tspan>
+<tspan x="10" y="826">  │ │ ├── path-is-absolute@1.0.1 </tspan>
+<tspan x="10" y="842">  │ │ └─┬ readdirp@2.1.0 </tspan>
+<tspan x="10" y="858">  │ │   ├── graceful-fs@4.1.11 </tspan>
+<tspan x="10" y="874">  │ │   ├─┬ minimatch@3.0.3 </tspan>
+<tspan x="10" y="890">  │ │   │ └─┬ brace-expansion@1.1.6 </tspan>
+<tspan x="10" y="906">  │ │   │   ├── balanced-match@0.4.2 </tspan>
+<tspan x="10" y="922">  │ │   │   └── concat-map@0.0.1 </tspan>
+<tspan x="10" y="938">  │ │   ├─┬ readable-stream@2.2.6 </tspan>
+<tspan x="10" y="954">  │ │   │ ├── buffer-shims@1.0.0 </tspan>
+<tspan x="10" y="970">  │ │   │ ├── core-util-is@1.0.2 </tspan>
+<tspan x="10" y="986">  │ │   │ ├── isarray@1.0.0 </tspan>
+<tspan x="10" y="1002">  │ │   │ ├── process-nextick-args@1.0.7 </tspan>
+<tspan x="10" y="1018">  │ │   │ ├── string_decoder@0.10.31 </tspan>
+<tspan x="10" y="1034">  │ │   │ └── util-deprecate@1.0.2 </tspan>
+<tspan x="10" y="1050">  │ │   └── set-immediate-shim@1.0.1 </tspan>
+<tspan x="10" y="1066">  │ ├── co@4.6.0 </tspan>
+<tspan x="10" y="1082">  │ ├─┬ optionator@0.8.2 </tspan>
+<tspan x="10" y="1098">  │ │ ├── deep-is@0.1.3 </tspan>
+<tspan x="10" y="1114">  │ │ ├── fast-levenshtein@2.0.6 </tspan>
+<tspan x="10" y="1130">  │ │ ├── levn@0.3.0 </tspan>
+<tspan x="10" y="1146">  │ │ ├── prelude-ls@1.1.2 </tspan>
+<tspan x="10" y="1162">  │ │ ├── type-check@0.3.2 </tspan>
+<tspan x="10" y="1178">  │ │ └── wordwrap@1.0.0 </tspan>
+<tspan x="10" y="1194">  │ ├─┬ rollup@0.36.4 </tspan>
+<tspan x="10" y="1210">  │ │ └─┬ source-map-support@0.4.14 </tspan>
+<tspan x="10" y="1226">  │ │   └── source-map@0.5.6 </tspan>
+<tspan x="10" y="1242">  │ └─┬ shelljs@0.7.7 </tspan>
+<tspan x="10" y="1258">  │   ├─┬ glob@7.1.1 </tspan>
+<tspan x="10" y="1274">  │   │ ├── fs.realpath@1.0.0 </tspan>
+<tspan x="10" y="1290">  │   │ ├─┬ inflight@1.0.6 </tspan>
+<tspan x="10" y="1306">  │   │ │ └── wrappy@1.0.2 </tspan>
+<tspan x="10" y="1322">  │   │ └── once@1.4.0 </tspan>
+<tspan x="10" y="1338">  │   ├── interpret@1.0.2 </tspan>
+<tspan x="10" y="1354">  │   └─┬ rechoir@0.6.2 </tspan>
+<tspan x="10" y="1370">  │     └─┬ resolve@1.3.2 </tspan>
+<tspan x="10" y="1386">  │       └── path-parse@1.0.5 </tspan>
+<tspan x="10" y="1402">  ├── riot-compiler@3.2.1 </tspan>
+<tspan x="10" y="1418">  ├── riot-observable@3.0.0 </tspan>
+<tspan x="10" y="1434">  ├── riot-tmpl@3.0.3 </tspan>
+<tspan x="10" y="1450">  ├── simple-dom@0.3.2 </tspan>
+<tspan x="10" y="1466">  └── simple-html-tokenizer@0.4.1</tspan>
+</text>
+</svg>

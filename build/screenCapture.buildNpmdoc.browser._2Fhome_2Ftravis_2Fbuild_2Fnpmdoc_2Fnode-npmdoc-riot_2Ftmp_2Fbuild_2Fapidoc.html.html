@@ -1,0 +1,3997 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://riotjs.com/">riot (v3.4.0)</a>
+</h1>
+<h4>A React-like user interface micro-library</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot">module riot</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.Tag">
+            function <span class="apidocSignatureSpan">riot.</span>Tag
+            <span class="apidocSignatureSpan">(el, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.compile">
+            function <span class="apidocSignatureSpan">riot.</span>compile
+            <span class="apidocSignatureSpan">(src, opts, url)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.mixin">
+            function <span class="apidocSignatureSpan">riot.</span>mixin
+            <span class="apidocSignatureSpan">(name, mix, g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.mount">
+            function <span class="apidocSignatureSpan">riot.</span>mount
+            <span class="apidocSignatureSpan">(selector, tagName, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.observable">
+            function <span class="apidocSignatureSpan">riot.</span>observable
+            <span class="apidocSignatureSpan">(el)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.render">
+            function <span class="apidocSignatureSpan">riot.</span>render
+            <span class="apidocSignatureSpan">(tagName, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.renderAsync">
+            function <span class="apidocSignatureSpan">riot.</span>renderAsync
+            <span class="apidocSignatureSpan">(tagName, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.require">
+            function <span class="apidocSignatureSpan">riot.</span>require
+            <span class="apidocSignatureSpan">(filename, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.tag">
+            function <span class="apidocSignatureSpan">riot.</span>tag
+            <span class="apidocSignatureSpan">(name, tmpl, css, attrs, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.tag2">
+            function <span class="apidocSignatureSpan">riot.</span>tag2
+            <span class="apidocSignatureSpan">(name, tmpl, css, attrs, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.unregister">
+            function <span class="apidocSignatureSpan">riot.</span>unregister
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.update">
+            function <span class="apidocSignatureSpan">riot.</span>update
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.brackets">
+            function <span class="apidocSignatureSpan">riot.</span>util.brackets
+            <span class="apidocSignatureSpan">(reOrIdx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tmpl">
+            function <span class="apidocSignatureSpan">riot.</span>util.tmpl
+            <span class="apidocSignatureSpan">(str, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>parsers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>parsers.css</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>parsers.html</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>parsers.js</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>riot_csp</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>settings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>util</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>util.check</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>util.dom</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>util.misc</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>util.styleManager</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.</span>util.tags</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">riot.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.parsers">module riot.parsers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers._req">
+            function <span class="apidocSignatureSpan">riot.parsers.</span>_req
+            <span class="apidocSignatureSpan">(name, req)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.parsers.</span>css</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.parsers.</span>html</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.parsers.</span>js</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.parsers.css">module riot.parsers.css</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.css.less">
+            function <span class="apidocSignatureSpan">riot.parsers.css.</span>less
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.css.sass">
+            function <span class="apidocSignatureSpan">riot.parsers.css.</span>sass
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.css.scss">
+            function <span class="apidocSignatureSpan">riot.parsers.css.</span>scss
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.css.stylus">
+            function <span class="apidocSignatureSpan">riot.parsers.css.</span>stylus
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.parsers.html">module riot.parsers.html</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.html.jade">
+            function <span class="apidocSignatureSpan">riot.parsers.html.</span>jade
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.html.pug">
+            function <span class="apidocSignatureSpan">riot.parsers.html.</span>pug
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.parsers.js">module riot.parsers.js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.js.buble">
+            function <span class="apidocSignatureSpan">riot.parsers.js.</span>buble
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.js.coffee">
+            function <span class="apidocSignatureSpan">riot.parsers.js.</span>coffee
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.js.coffeescript">
+            function <span class="apidocSignatureSpan">riot.parsers.js.</span>coffeescript
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.js.es6">
+            function <span class="apidocSignatureSpan">riot.parsers.js.</span>es6
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.js.javascript">
+            function <span class="apidocSignatureSpan">riot.parsers.js.</span>javascript
+            <span class="apidocSignatureSpan">(src)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.js.livescript">
+            function <span class="apidocSignatureSpan">riot.parsers.js.</span>livescript
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.js.none">
+            function <span class="apidocSignatureSpan">riot.parsers.js.</span>none
+            <span class="apidocSignatureSpan">(src)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.parsers.js.typescript">
+            function <span class="apidocSignatureSpan">riot.parsers.js.</span>typescript
+            <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.render">module riot.render</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.render.render">
+            function <span class="apidocSignatureSpan">riot.</span>render
+            <span class="apidocSignatureSpan">(tagName, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.render.dom">
+            function <span class="apidocSignatureSpan">riot.render.</span>dom
+            <span class="apidocSignatureSpan">(tagName, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.render.tag">
+            function <span class="apidocSignatureSpan">riot.render.</span>tag
+            <span class="apidocSignatureSpan">(tagName, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.riot_csp">module riot.riot_csp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.riot_csp.Tag">
+            function <span class="apidocSignatureSpan">riot.riot_csp.</span>Tag
+            <span class="apidocSignatureSpan">(el, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.riot_csp.mixin">
+            function <span class="apidocSignatureSpan">riot.riot_csp.</span>mixin
+            <span class="apidocSignatureSpan">(name, mix, g)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.riot_csp.mount">
+            function <span class="apidocSignatureSpan">riot.riot_csp.</span>mount
+            <span class="apidocSignatureSpan">(selector, tagName, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.riot_csp.observable">
+            function <span class="apidocSignatureSpan">riot.riot_csp.</span>observable
+            <span class="apidocSignatureSpan">(el)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.riot_csp.tag">
+            function <span class="apidocSignatureSpan">riot.riot_csp.</span>tag
+            <span class="apidocSignatureSpan">(name, tmpl, css, attrs, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.riot_csp.tag2">
+            function <span class="apidocSignatureSpan">riot.riot_csp.</span>tag2
+            <span class="apidocSignatureSpan">(name, tmpl, css, attrs, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.riot_csp.unregister">
+            function <span class="apidocSignatureSpan">riot.riot_csp.</span>unregister
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.riot_csp.update">
+            function <span class="apidocSignatureSpan">riot.riot_csp.</span>update
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.riot_csp.</span>default</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.riot_csp.</span>settings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.riot_csp.</span>util</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">riot.riot_csp.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.util">module riot.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.brackets">
+            function <span class="apidocSignatureSpan">riot.util.</span>brackets
+            <span class="apidocSignatureSpan">(reOrIdx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tmpl">
+            function <span class="apidocSignatureSpan">riot.util.</span>tmpl
+            <span class="apidocSignatureSpan">(str, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.util.</span>check</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.util.</span>dom</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.util.</span>misc</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.util.</span>styleManager</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.util.</span>tags</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.util.</span>vdom</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.util.brackets">module riot.util.brackets</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.brackets.brackets">
+            function <span class="apidocSignatureSpan">riot.util.</span>brackets
+            <span class="apidocSignatureSpan">(reOrIdx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.brackets.array">
+            function <span class="apidocSignatureSpan">riot.util.brackets.</span>array
+            <span class="apidocSignatureSpan">(pair)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.brackets.hasExpr">
+            function <span class="apidocSignatureSpan">riot.util.brackets.</span>hasExpr
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.brackets.loopKeys">
+            function <span class="apidocSignatureSpan">riot.util.brackets.</span>loopKeys
+            <span class="apidocSignatureSpan">(expr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.brackets.set">
+            function <span class="apidocSignatureSpan">riot.util.brackets.</span>set
+            <span class="apidocSignatureSpan">(pair)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.brackets.split">
+            function <span class="apidocSignatureSpan">riot.util.brackets.</span>split
+            <span class="apidocSignatureSpan">(str, tmpl, _bp)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.util.brackets.</span>R_MLCOMMS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.util.brackets.</span>R_STRINGS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">riot.util.brackets.</span>S_QBLOCKS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">riot.util.brackets.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.util.check">module riot.util.check</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.check.isArray">
+            function <span class="apidocSignatureSpan">riot.util.check.</span>isArray
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.check.isBlank">
+            function <span class="apidocSignatureSpan">riot.util.check.</span>isBlank
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.check.isBoolAttr">
+            function <span class="apidocSignatureSpan">riot.util.check.</span>isBoolAttr
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.check.isFunction">
+            function <span class="apidocSignatureSpan">riot.util.check.</span>isFunction
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.check.isObject">
+            function <span class="apidocSignatureSpan">riot.util.check.</span>isObject
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.check.isReservedName">
+            function <span class="apidocSignatureSpan">riot.util.check.</span>isReservedName
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.check.isString">
+            function <span class="apidocSignatureSpan">riot.util.check.</span>isString
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.check.isUndefined">
+            function <span class="apidocSignatureSpan">riot.util.check.</span>isUndefined
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.check.isWritable">
+            function <span class="apidocSignatureSpan">riot.util.check.</span>isWritable
+            <span class="apidocSignatureSpan">(obj, key)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.util.dom">module riot.util.dom</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.createDOMPlaceholder">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>createDOMPlaceholder
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.createFrag">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>createFrag
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.getAttr">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>getAttr
+            <span class="apidocSignatureSpan">(dom, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.mkEl">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>mkEl
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.remAttr">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>remAttr
+            <span class="apidocSignatureSpan">(dom, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.safeInsert">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>safeInsert
+            <span class="apidocSignatureSpan">(root, curr, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.setAttr">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>setAttr
+            <span class="apidocSignatureSpan">(dom, name, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.setInnerHTML">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>setInnerHTML
+            <span class="apidocSignatureSpan">(container, html)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.styleObjectToString">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>styleObjectToString
+            <span class="apidocSignatureSpan">(style)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.toggleVisibility">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>toggleVisibility
+            <span class="apidocSignatureSpan">(dom, show)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.walkAttrs">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>walkAttrs
+            <span class="apidocSignatureSpan">(html, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.dom.walkNodes">
+            function <span class="apidocSignatureSpan">riot.util.dom.</span>walkNodes
+            <span class="apidocSignatureSpan">(dom, fn, context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.util.misc">module riot.util.misc</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.misc.contains">
+            function <span class="apidocSignatureSpan">riot.util.misc.</span>contains
+            <span class="apidocSignatureSpan">(array, item)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.misc.defineProperty">
+            function <span class="apidocSignatureSpan">riot.util.misc.</span>defineProperty
+            <span class="apidocSignatureSpan">(el, key, value, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.misc.each">
+            function <span class="apidocSignatureSpan">riot.util.misc.</span>each
+            <span class="apidocSignatureSpan">(list, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.misc.extend">
+            function <span class="apidocSignatureSpan">riot.util.misc.</span>extend
+            <span class="apidocSignatureSpan">(src)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.misc.startsWith">
+            function <span class="apidocSignatureSpan">riot.util.misc.</span>startsWith
+            <span class="apidocSignatureSpan">(str, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.misc.toCamel">
+            function <span class="apidocSignatureSpan">riot.util.misc.</span>toCamel
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.util.styleManager">module riot.util.styleManager</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.styleManager.add">
+            function <span class="apidocSignatureSpan">riot.util.styleManager.</span>add
+            <span class="apidocSignatureSpan">(css, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.styleManager.inject">
+            function <span class="apidocSignatureSpan">riot.util.styleManager.</span>inject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.util.tags">module riot.util.tags</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.arrayishAdd">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>arrayishAdd
+            <span class="apidocSignatureSpan">(obj, key, value, ensureArray, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.arrayishRemove">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>arrayishRemove
+            <span class="apidocSignatureSpan">(obj, key, value, ensureArray)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.cleanUpData">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>cleanUpData
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.getImmediateCustomParentTag">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>getImmediateCustomParentTag
+            <span class="apidocSignatureSpan">(tag)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.getTag">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>getTag
+            <span class="apidocSignatureSpan">(dom)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.getTagName">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>getTagName
+            <span class="apidocSignatureSpan">(dom, skipDataIs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.inheritFrom">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>inheritFrom
+            <span class="apidocSignatureSpan">(target, propsInSyncWithParent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.initChildTag">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>initChildTag
+            <span class="apidocSignatureSpan">(child, opts, innerHTML, parent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.makeReplaceVirtual">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>makeReplaceVirtual
+            <span class="apidocSignatureSpan">(tag, ref)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.makeVirtual">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>makeVirtual
+            <span class="apidocSignatureSpan">(src, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.mountTo">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>mountTo
+            <span class="apidocSignatureSpan">(root, tagName, opts, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.moveChildTag">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>moveChildTag
+            <span class="apidocSignatureSpan">(tagName, newPos)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.moveVirtual">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>moveVirtual
+            <span class="apidocSignatureSpan">(src, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.selectTags">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>selectTags
+            <span class="apidocSignatureSpan">(tags)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tags.unmountAll">
+            function <span class="apidocSignatureSpan">riot.util.tags.</span>unmountAll
+            <span class="apidocSignatureSpan">(expressions)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.riot.util.tmpl">module riot.util.tmpl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tmpl.tmpl">
+            function <span class="apidocSignatureSpan">riot.util.</span>tmpl
+            <span class="apidocSignatureSpan">(str, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tmpl.clearCache">
+            function <span class="apidocSignatureSpan">riot.util.tmpl.</span>clearCache
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tmpl.hasExpr">
+            function <span class="apidocSignatureSpan">riot.util.tmpl.</span>hasExpr
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.riot.util.tmpl.loopKeys">
+            function <span class="apidocSignatureSpan">riot.util.tmpl.</span>loopKeys
+            <span class="apidocSignatureSpan">(expr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">riot.util.tmpl.</span>errorHandler</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">riot.util.tmpl.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot" id="apidoc.module.riot">module riot</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.Tag" id="apidoc.element.riot.Tag">
+        function <span class="apidocSignatureSpan">riot.</span>Tag
+        <span class="apidocSignatureSpan">(el, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Tag$2(el, opts) {
+  // get the tag properties from the class constructor
+  var ref = this;
+  var name = ref.name;
+  var tmpl = ref.tmpl;
+  var css = ref.css;
+  var attrs = ref.attrs;
+  var onCreate = ref.onCreate;
+  // register a new tag and cache the class prototype
+  if (!__TAG_IMPL[name]) {
+    tag$1(name, tmpl, css, attrs, onCreate);
+    // cache the class constructor
+    __TAG_IMPL[name].class = this.constructor;
+  }
+
+  // mount the tag using the class instance
+  mountTo(el, name, opts, this);
+  // inject the component css
+  if (css) { styleManager.inject(); }
+
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.compile" id="apidoc.element.riot.compile">
+        function <span class="apidocSignatureSpan">riot.</span>compile
+        <span class="apidocSignatureSpan">(src, opts, url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compile(src, opts, url) {
+  var
+    parts = [],
+    included,
+    defaultParserptions = {
+
+      template: {},
+      js: {},
+      style: {}
+    }
+
+  if (!opts) opts = {}
+
+  opts.parserOptions = extend(defaultParserptions, opts.parserOptions || {})
+
+  included = opts.exclude
+    ? function (s) { return opts.exclude.indexOf(s) &lt; 0 } : function () { return 1 }
+
+  if (!url) url = process.cwd() + '/.'
+
+  var _bp = brackets.array(opts.brackets)
+
+  if (opts.template) {
+    src = compileTemplate(src, url, opts.template, opts.parserOptions.template)
+  }
+
+  src = cleanSource(src)
+    .replace(CUST_TAG, function (_, indent, tagName, attribs, body, body2) {
+      var
+        jscode = '',
+        styles = '',
+        html = '',
+        imports = '',
+        pcex = []
+
+      pcex._bp = _bp
+
+      tagName = tagName.toLowerCase()
+
+      attribs = attribs &amp;&amp; included('attribs')
+        ? restoreExpr(
+            parseAttribs(
+              splitHtml(attribs, opts, pcex),
+            pcex),
+          pcex) : ''
+
+      if ((body || (body = body2)) &amp;&amp; /\S/.test(body)) {
+
+        if (body2) {
+
+          if (included('html')) html = _compileHTML(body2, opts, pcex)
+        } else {
+
+          body = body.replace(RegExp('^' + indent, 'gm'), '')
+
+          body = body.replace(SCRIPTS, function (_m, _attrs, _script) {
+            if (included('js')) {
+              var code = getCode(_script, opts, _attrs, url)
+
+              if (code === false) return _m.replace(DEFER_ATTR, '')
+              if (code) jscode += (jscode ? '\n' : '') + code
+            }
+            return ''
+          })
+
+          body = body.replace(STYLES, function (_m, _attrs, _style) {
+            if (included('css')) {
+              styles += (styles ? ' ' : '') + cssCode(_style, opts, _attrs, url, tagName)
+            }
+            return ''
+          })
+
+          var blocks = splitBlocks(body.replace(TRIM_TRAIL, ''))
+
+          if (included('html')) {
+            html = _compileHTML(blocks[0], opts, pcex)
+          }
+
+          if (included('js')) {
+            body = _compileJS(blocks[1], opts, null, null, url)
+            if (body) jscode += (jscode ? '\n' : '') + body
+            jscode = jscode.replace(IMPORT_STATEMENT, function (s) {
+              imports += s.trim() + '\n'
+              return ''
+            })
+          }
+        }
+      }
+
+      jscode = /\S/.test(jscode) ? jscode.replace(/\n{3,}/g, '\n\n') : ''
+
+      if (opts.entities) {
+        parts.push({
+          tagName: tagName,
+          html: html,
+          css: styles,
+          attribs: attribs,
+          js: jscode,
+          imports: imports
+        })
+        return ''
+      }
+
+      return mktag(tagName, html, styles, attribs, jscode, imports, opts)
+    })
+
+  if (opts.entities) return parts
+
+  if (opts.debug &amp;&amp; url.slice(-2) !== '/.') {
+    if (/^[\\/]/.test(url)) url = path.relative('.', url)
+    src = '//src: ' + url.replace(/\\/g, '/') + '\n' + src
+  }
+  return src
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.mixin" id="apidoc.element.riot.mixin">
+        function <span class="apidocSignatureSpan">riot.</span>mixin
+        <span class="apidocSignatureSpan">(name, mix, g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mixin$1(name, mix, g) {
+  // Unnamed global
+  if (isObject(name)) {
+    mixin$1(("__unnamed_" + (mixins_id++)), name, true);
+    return
+  }
+
+  var store = g ? globals : mixins;
+
+  // Getter
+  if (!mix) {
+    if (isUndefined(store[name]))
+      { throw new Error('Unregistered mixin: ' + name) }
+
+    return store[name]
+  }
+
+  // Setter
+  store[name] = isFunction(mix) ?
+    extend(mix.prototype, store[name] || {}) &amp;&amp; mix :
+    extend(store[name] || {}, mix);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// add global mixins
+var globalMixin = mixin$1(GLOBAL_MIXIN);
+
+if (globalMixin &amp;&amp; !skipAnonymous) {
+  for (var i in globalMixin) {
+    if (globalMixin.hasOwnProperty(i)) {
+      this$1.<span class="apidocCodeKeywordSpan">mixin</span>(globalMixin[i]);
+    }
+  }
+}
+
+if (impl.fn) { impl.fn.call(this, opts); }
+
+if (!skipAnonymous) { this.trigger('before-mount'); }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.mount" id="apidoc.element.riot.mount">
+        function <span class="apidocSignatureSpan">riot.</span>mount
+        <span class="apidocSignatureSpan">(selector, tagName, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mount$1(selector, tagName, opts) {
+  var tags = [];
+
+  function pushTagsTo(root) {
+    if (root.tagName) {
+      var riotTag = getAttr(root, IS_DIRECTIVE);
+
+      // have tagName? force riot-tag to be the same
+      if (tagName &amp;&amp; riotTag !== tagName) {
+        riotTag = tagName;
+        setAttr(root, IS_DIRECTIVE, tagName);
+      }
+
+      var tag = mountTo(root, riotTag || root.tagName.toLowerCase(), opts);
+
+      if (tag)
+        { tags.push(tag); }
+    } else if (root.length)
+      { each(root, pushTagsTo); } // assume nodeList
+  }
+
+  // inject styles into DOM
+  styleManager.inject();
+
+  if (isObject(tagName)) {
+    opts = tagName;
+    tagName = 0;
+  }
+
+  var elem;
+  var allTags;
+
+  // crawl the DOM to find the tag
+  if (isString(selector)) {
+    selector = selector === '*' ?
+      // select all registered tags
+      // &amp; tags found with the riot-tag attribute set
+      allTags = selectTags() :
+      // or just the ones named like the selector
+      selector + selectTags(selector.split(/, */));
+
+    // make sure to pass always a selector
+    // to the querySelectorAll function
+    elem = selector ? $$(selector) : [];
+  }
+  else
+    // probably you have passed already a tag or a NodeList
+    { elem = selector; }
+
+  // select all the registered and mount them inside their root elements
+  if (tagName === '*') {
+    // get all custom tags
+    tagName = allTags || selectTags();
+    // if the root els it's just a single tag
+    if (elem.tagName)
+      { elem = $$(tagName, elem); }
+    else {
+      // select all the children for all the different root elements
+      var nodeList = [];
+
+      each(elem, function (_el) { return nodeList.push($$(tagName, _el)); });
+
+      elem = nodeList;
+    }
+    // get rid of the tagName
+    tagName = 0;
+  }
+
+  pushTagsTo(elem);
+
+  return tags
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=timer)
+
+#### Mounting
+
+``` javascript
+riot.<span class="apidocCodeKeywordSpan">mount</span>('timer', { start: 0 })
+```
+
+#### Nesting
+
+Custom tags lets you build complex views with HTML.
+
+``` html
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.observable" id="apidoc.element.riot.observable">
+        function <span class="apidocSignatureSpan">riot.</span>observable
+        <span class="apidocSignatureSpan">(el)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">observable = function (el) {
+
+<span class="apidocCodeCommentSpan">  /**
+   * Extend the original object or create a new empty one
+   * @type { Object }
+   */
+</span>
+  el = el || {};
+
+  /**
+   * Private variables
+   */
+  var callbacks = {},
+    slice = Array.prototype.slice;
+
+  /**
+   * Public Api
+   */
+
+  // extend the el object adding the observable methods
+  Object.defineProperties(el, {
+    /**
+     * Listen to the given `event` ands
+     * execute the `callback` each time an event is triggered.
+     * @param  { String } event - event id
+     * @param  { Function } fn - callback function
+     * @returns { Object } el
+     */
+    on: {
+      value: function(event, fn) {
+        if (typeof fn == 'function')
+          { (callbacks[event] = callbacks[event] || []).push(fn); }
+        return el
+      },
+      enumerable: false,
+      writable: false,
+      configurable: false
+    },
+
+    /**
+     * Removes the given `event` listeners
+     * @param   { String } event - event id
+     * @param   { Function } fn - callback function
+     * @returns { Object } el
+     */
+    off: {
+      value: function(event, fn) {
+        if (event == '*' &amp;&amp; !fn) { callbacks = {}; }
+        else {
+          if (fn) {
+            var arr = callbacks[event];
+            for (var i = 0, cb; cb = arr &amp;&amp; arr[i]; ++i) {
+              if (cb == fn) { arr.splice(i--, 1); }
+            }
+          } else { delete callbacks[event]; }
+        }
+        return el
+      },
+      enumerable: false,
+      writable: false,
+      configurable: false
+    },
+
+    /**
+     * Listen to the given `event` and
+     * execute the `callback` at most once
+     * @param   { String } event - event id
+     * @param   { Function } fn - callback function
+     * @returns { Object } el
+     */
+    one: {
+      value: function(event, fn) {
+        function on() {
+          el.off(event, on);
+          fn.apply(el, arguments);
+        }
+        return el.on(event, on)
+      },
+      enumerable: false,
+      writable: false,
+      configurable: false
+    },
+
+    /**
+     * Execute all callback functions that listen to
+     * the given `event`
+     * @param   { String } event - event id
+     * @returns { Object } el
+     */
+    trigger: {
+      value: function(event) {
+        var arguments$1 = arguments;
+
+
+        // getting the arguments
+        var arglen = arguments.length - 1,
+          args = new Array(arglen),
+          fns,
+          fn,
+          i;
+
+        for (i = 0; i &lt; arglen; i++) {
+          args[i] = arguments$1[i + 1]; // skip first argument
+        }
+
+        fns = slice.call(callbacks[event] || [], 0);
+
+        for (i = 0; fn = fns[i]; ++i) {
+          fn.apply(el, args);
+        }
+
+        if (callbacks['*'] &amp;&amp; event != '*')
+          { el.trigger.apply(el, ['*', event].concat(args)); }
+
+        return el
+      },
+      enumerable: false,
+      writable: false,
+      configurable: false
+    }
+  });
+
+  return el
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.render" id="apidoc.element.riot.render">
+        function <span class="apidocSignatureSpan">riot.</span>render
+        <span class="apidocSignatureSpan">(tagName, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render(tagName, opts) {
+  var tag = render.tag(tagName, opts),
+    html = getTagHtml(tag)
+  // unmount the tag avoiding memory leaks
+  tag.unmount()
+  return html
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.renderAsync" id="apidoc.element.riot.renderAsync">
+        function <span class="apidocSignatureSpan">riot.</span>renderAsync
+        <span class="apidocSignatureSpan">(tagName, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renderAsync(tagName, opts) {
+  return Promise.race([
+    new Promise((resolve, reject) =&gt; {
+      setTimeout(function() {
+        reject(new Error(`Timeout error:: the tag "${ tagName }" didn\'t trigger the "ready" event during the rendering process`))
+      }, riot.settings.asyncRenderTimeout)
+    }),
+    new Promise(resolve =&gt; {
+      var tag = render.tag(tagName, opts)
+      tag.on('ready', function() {
+        var html = getTagHtml(tag)
+        tag.unmount()
+        resolve(html)
+      })
+    })
+  ])
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.require" id="apidoc.element.riot.require">
+        function <span class="apidocSignatureSpan">riot.</span>require
+        <span class="apidocSignatureSpan">(filename, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function riotRequire(filename, opts) {
+  var module = new Module()
+  module.id = module.filename = filename
+  loadAndCompile(filename, opts, module)
+  return module.exports
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.tag" id="apidoc.element.riot.tag">
+        function <span class="apidocSignatureSpan">riot.</span>tag
+        <span class="apidocSignatureSpan">(name, tmpl, css, attrs, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tag$1(name, tmpl, css, attrs, fn) {
+  if (isFunction(attrs)) {
+    fn = attrs;
+
+    if (/^[\w\-]+\s?=/.test(css)) {
+      attrs = css;
+      css = '';
+    } else
+      { attrs = ''; }
+  }
+
+  if (css) {
+    if (isFunction(css))
+      { fn = css; }
+    else
+      { styleManager.add(css); }
+  }
+
+  name = name.toLowerCase();
+  __TAG_IMPL[name] = { name: name, tmpl: tmpl, attrs: attrs, fn: fn };
+
+  return name
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.tag2" id="apidoc.element.riot.tag2">
+        function <span class="apidocSignatureSpan">riot.</span>tag2
+        <span class="apidocSignatureSpan">(name, tmpl, css, attrs, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tag2$1(name, tmpl, css, attrs, fn) {
+  if (css) { styleManager.add(css, name); }
+
+  __TAG_IMPL[name] = { name: name, tmpl: tmpl, attrs: attrs, fn: fn };
+
+  return name
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.unregister" id="apidoc.element.riot.unregister">
+        function <span class="apidocSignatureSpan">riot.</span>unregister
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unregister$1(name) {
+  delete __TAG_IMPL[name];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.update" id="apidoc.element.riot.update">
+        function <span class="apidocSignatureSpan">riot.</span>update
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function update$1() {
+  return each(__TAGS_CACHE, function (tag) { return tag.update(); })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&lt;timer&gt;
+
+&lt;p&gt;Seconds Elapsed: { time }&lt;/p&gt;
+
+this.time = opts.start || 0
+
+tick() {
+  this.<span class="apidocCodeKeywordSpan">update</span>({ time: ++this.time })
+}
+
+var timer = setInterval(this.tick, 1000)
+
+this.on('unmount', function() {
+  clearInterval(timer)
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.brackets" id="apidoc.element.riot.util.brackets">
+        function <span class="apidocSignatureSpan">riot.</span>util.brackets
+        <span class="apidocSignatureSpan">(reOrIdx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _brackets(reOrIdx) {
+  return reOrIdx instanceof RegExp ? _regex(reOrIdx) : _cache[reOrIdx]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tmpl" id="apidoc.element.riot.util.tmpl">
+        function <span class="apidocSignatureSpan">riot.</span>util.tmpl
+        <span class="apidocSignatureSpan">(str, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _tmpl(str, data) {
+  if (!str) { return str }
+
+  return (_cache[str] || (_cache[str] = _create(str))).call(data, _logErr)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.parsers" id="apidoc.module.riot.parsers">module riot.parsers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers._req" id="apidoc.element.riot.parsers._req">
+        function <span class="apidocSignatureSpan">riot.parsers.</span>_req
+        <span class="apidocSignatureSpan">(name, req)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _req(name, req) {
+  var
+    err,
+    mod,
+    branch,
+    parser = name.split('.')
+
+  if (parser.length &gt; 1) {
+    branch = parser[0]
+    parser = parser[1]
+  } else {
+    branch = NULL
+    parser = name
+  }
+
+  // is the parser registered?
+  branch = _find(branch, parser)
+  if (!branch) {
+    if (req) {
+      err = 'Riot parser "' + name + '" is not registered.'
+      throw new Error(err)
+    }
+    return NULL
+  }
+
+  // parser registered, needs load?
+  if (_loaders[branch][parser]) {
+    if (req) {
+      mod = _load(branch, parser)
+    } else {
+      try {
+        mod = _load(branch, parser)
+      } catch (_) {
+        // istanbul ignore next
+        mod = NULL
+      }
+    }
+  } else {
+    mod = _parsers[branch][parser]
+  }
+
+  return mod
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.parsers.css" id="apidoc.module.riot.parsers.css">module riot.parsers.css</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.css.less" id="apidoc.element.riot.parsers.css.less">
+        function <span class="apidocSignatureSpan">riot.parsers.css.</span>less
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.css.sass" id="apidoc.element.riot.parsers.css.sass">
+        function <span class="apidocSignatureSpan">riot.parsers.css.</span>sass
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.css.scss" id="apidoc.element.riot.parsers.css.scss">
+        function <span class="apidocSignatureSpan">riot.parsers.css.</span>scss
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.css.stylus" id="apidoc.element.riot.parsers.css.stylus">
+        function <span class="apidocSignatureSpan">riot.parsers.css.</span>stylus
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.parsers.html" id="apidoc.module.riot.parsers.html">module riot.parsers.html</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.html.jade" id="apidoc.element.riot.parsers.html.jade">
+        function <span class="apidocSignatureSpan">riot.parsers.html.</span>jade
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.html.pug" id="apidoc.element.riot.parsers.html.pug">
+        function <span class="apidocSignatureSpan">riot.parsers.html.</span>pug
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.parsers.js" id="apidoc.module.riot.parsers.js">module riot.parsers.js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.js.buble" id="apidoc.element.riot.parsers.js.buble">
+        function <span class="apidocSignatureSpan">riot.parsers.js.</span>buble
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.js.coffee" id="apidoc.element.riot.parsers.js.coffee">
+        function <span class="apidocSignatureSpan">riot.parsers.js.</span>coffee
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.js.coffeescript" id="apidoc.element.riot.parsers.js.coffeescript">
+        function <span class="apidocSignatureSpan">riot.parsers.js.</span>coffeescript
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.js.es6" id="apidoc.element.riot.parsers.js.es6">
+        function <span class="apidocSignatureSpan">riot.parsers.js.</span>es6
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.js.javascript" id="apidoc.element.riot.parsers.js.javascript">
+        function <span class="apidocSignatureSpan">riot.parsers.js.</span>javascript
+        <span class="apidocSignatureSpan">(src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _none(src) {
+  return src
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.js.livescript" id="apidoc.element.riot.parsers.js.livescript">
+        function <span class="apidocSignatureSpan">riot.parsers.js.</span>livescript
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.js.none" id="apidoc.element.riot.parsers.js.none">
+        function <span class="apidocSignatureSpan">riot.parsers.js.</span>none
+        <span class="apidocSignatureSpan">(src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _none(src) {
+  return src
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.parsers.js.typescript" id="apidoc.element.riot.parsers.js.typescript">
+        function <span class="apidocSignatureSpan">riot.parsers.js.</span>typescript
+        <span class="apidocSignatureSpan">(p1, p2, p3, p4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _loadParser(p1, p2, p3, p4) {
+  var fn = _load(branch, parser)
+  return fn(p1, p2, p3, p4)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.render" id="apidoc.module.riot.render">module riot.render</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.render.render" id="apidoc.element.riot.render.render">
+        function <span class="apidocSignatureSpan">riot.</span>render
+        <span class="apidocSignatureSpan">(tagName, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function render(tagName, opts) {
+  var tag = render.tag(tagName, opts),
+    html = getTagHtml(tag)
+  // unmount the tag avoiding memory leaks
+  tag.unmount()
+  return html
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.render.dom" id="apidoc.element.riot.render.dom">
+        function <span class="apidocSignatureSpan">riot.render.</span>dom
+        <span class="apidocSignatureSpan">(tagName, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dom = function (tagName, opts) {
+  return riot.render.tag(tagName, opts).root
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.render.tag" id="apidoc.element.riot.render.tag">
+        function <span class="apidocSignatureSpan">riot.render.</span>tag
+        <span class="apidocSignatureSpan">(tagName, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tag = function (tagName, opts) {
+  var root = document.createElement(tagName),
+    tag = riot.mount(root, opts)[0]
+  return tag
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.riot_csp" id="apidoc.module.riot.riot_csp">module riot.riot_csp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.riot_csp.Tag" id="apidoc.element.riot.riot_csp.Tag">
+        function <span class="apidocSignatureSpan">riot.riot_csp.</span>Tag
+        <span class="apidocSignatureSpan">(el, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Tag$2(el, opts) {
+  // get the tag properties from the class constructor
+  var ref = this;
+  var name = ref.name;
+  var tmpl = ref.tmpl;
+  var css = ref.css;
+  var attrs = ref.attrs;
+  var onCreate = ref.onCreate;
+  // register a new tag and cache the class prototype
+  if (!__TAG_IMPL[name]) {
+    tag$1(name, tmpl, css, attrs, onCreate);
+    // cache the class constructor
+    __TAG_IMPL[name].class = this.constructor;
+  }
+
+  // mount the tag using the class instance
+  mountTo(el, name, opts, this);
+  // inject the component css
+  if (css) { styleManager.inject(); }
+
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.riot_csp.mixin" id="apidoc.element.riot.riot_csp.mixin">
+        function <span class="apidocSignatureSpan">riot.riot_csp.</span>mixin
+        <span class="apidocSignatureSpan">(name, mix, g)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mixin$1(name, mix, g) {
+  // Unnamed global
+  if (isObject(name)) {
+    mixin$1(("__unnamed_" + (mixins_id++)), name, true);
+    return
+  }
+
+  var store = g ? globals : mixins;
+
+  // Getter
+  if (!mix) {
+    if (isUndefined(store[name]))
+      { throw new Error('Unregistered mixin: ' + name) }
+
+    return store[name]
+  }
+
+  // Setter
+  store[name] = isFunction(mix) ?
+    extend(mix.prototype, store[name] || {}) &amp;&amp; mix :
+    extend(store[name] || {}, mix);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// add global mixins
+var globalMixin = mixin$1(GLOBAL_MIXIN);
+
+if (globalMixin &amp;&amp; !skipAnonymous) {
+  for (var i in globalMixin) {
+    if (globalMixin.hasOwnProperty(i)) {
+      this$1.<span class="apidocCodeKeywordSpan">mixin</span>(globalMixin[i]);
+    }
+  }
+}
+
+if (impl.fn) { impl.fn.call(this, opts); }
+
+if (!skipAnonymous) { this.trigger('before-mount'); }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.riot_csp.mount" id="apidoc.element.riot.riot_csp.mount">
+        function <span class="apidocSignatureSpan">riot.riot_csp.</span>mount
+        <span class="apidocSignatureSpan">(selector, tagName, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mount$1(selector, tagName, opts) {
+  var tags = [];
+
+  function pushTagsTo(root) {
+    if (root.tagName) {
+      var riotTag = getAttr(root, IS_DIRECTIVE);
+
+      // have tagName? force riot-tag to be the same
+      if (tagName &amp;&amp; riotTag !== tagName) {
+        riotTag = tagName;
+        setAttr(root, IS_DIRECTIVE, tagName);
+      }
+
+      var tag = mountTo(root, riotTag || root.tagName.toLowerCase(), opts);
+
+      if (tag)
+        { tags.push(tag); }
+    } else if (root.length)
+      { each(root, pushTagsTo); } // assume nodeList
+  }
+
+  // inject styles into DOM
+  styleManager.inject();
+
+  if (isObject(tagName)) {
+    opts = tagName;
+    tagName = 0;
+  }
+
+  var elem;
+  var allTags;
+
+  // crawl the DOM to find the tag
+  if (isString(selector)) {
+    selector = selector === '*' ?
+      // select all registered tags
+      // &amp; tags found with the riot-tag attribute set
+      allTags = selectTags() :
+      // or just the ones named like the selector
+      selector + selectTags(selector.split(/, */));
+
+    // make sure to pass always a selector
+    // to the querySelectorAll function
+    elem = selector ? $$(selector) : [];
+  }
+  else
+    // probably you have passed already a tag or a NodeList
+    { elem = selector; }
+
+  // select all the registered and mount them inside their root elements
+  if (tagName === '*') {
+    // get all custom tags
+    tagName = allTags || selectTags();
+    // if the root els it's just a single tag
+    if (elem.tagName)
+      { elem = $$(tagName, elem); }
+    else {
+      // select all the children for all the different root elements
+      var nodeList = [];
+
+      each(elem, function (_el) { return nodeList.push($$(tagName, _el)); });
+
+      elem = nodeList;
+    }
+    // get rid of the tagName
+    tagName = 0;
+  }
+
+  pushTagsTo(elem);
+
+  return tags
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=timer)
+
+#### Mounting
+
+``` javascript
+riot.<span class="apidocCodeKeywordSpan">mount</span>('timer', { start: 0 })
+```
+
+#### Nesting
+
+Custom tags lets you build complex views with HTML.
+
+``` html
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.riot_csp.observable" id="apidoc.element.riot.riot_csp.observable">
+        function <span class="apidocSignatureSpan">riot.riot_csp.</span>observable
+        <span class="apidocSignatureSpan">(el)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">observable = function (el) {
+
+<span class="apidocCodeCommentSpan">  /**
+   * Extend the original object or create a new empty one
+   * @type { Object }
+   */
+</span>
+  el = el || {};
+
+  /**
+   * Private variables
+   */
+  var callbacks = {},
+    slice = Array.prototype.slice;
+
+  /**
+   * Public Api
+   */
+
+  // extend the el object adding the observable methods
+  Object.defineProperties(el, {
+    /**
+     * Listen to the given `event` ands
+     * execute the `callback` each time an event is triggered.
+     * @param  { String } event - event id
+     * @param  { Function } fn - callback function
+     * @returns { Object } el
+     */
+    on: {
+      value: function(event, fn) {
+        if (typeof fn == 'function')
+          { (callbacks[event] = callbacks[event] || []).push(fn); }
+        return el
+      },
+      enumerable: false,
+      writable: false,
+      configurable: false
+    },
+
+    /**
+     * Removes the given `event` listeners
+     * @param   { String } event - event id
+     * @param   { Function } fn - callback function
+     * @returns { Object } el
+     */
+    off: {
+      value: function(event, fn) {
+        if (event == '*' &amp;&amp; !fn) { callbacks = {}; }
+        else {
+          if (fn) {
+            var arr = callbacks[event];
+            for (var i = 0, cb; cb = arr &amp;&amp; arr[i]; ++i) {
+              if (cb == fn) { arr.splice(i--, 1); }
+            }
+          } else { delete callbacks[event]; }
+        }
+        return el
+      },
+      enumerable: false,
+      writable: false,
+      configurable: false
+    },
+
+    /**
+     * Listen to the given `event` and
+     * execute the `callback` at most once
+     * @param   { String } event - event id
+     * @param   { Function } fn - callback function
+     * @returns { Object } el
+     */
+    one: {
+      value: function(event, fn) {
+        function on() {
+          el.off(event, on);
+          fn.apply(el, arguments);
+        }
+        return el.on(event, on)
+      },
+      enumerable: false,
+      writable: false,
+      configurable: false
+    },
+
+    /**
+     * Execute all callback functions that listen to
+     * the given `event`
+     * @param   { String } event - event id
+     * @returns { Object } el
+     */
+    trigger: {
+      value: function(event) {
+        var arguments$1 = arguments;
+
+
+        // getting the arguments
+        var arglen = arguments.length - 1,
+          args = new Array(arglen),
+          fns,
+          fn,
+          i;
+
+        for (i = 0; i &lt; arglen; i++) {
+          args[i] = arguments$1[i + 1]; // skip first argument
+        }
+
+        fns = slice.call(callbacks[event] || [], 0);
+
+        for (i = 0; fn = fns[i]; ++i) {
+          fn.apply(el, args);
+        }
+
+        if (callbacks['*'] &amp;&amp; event != '*')
+          { el.trigger.apply(el, ['*', event].concat(args)); }
+
+        return el
+      },
+      enumerable: false,
+      writable: false,
+      configurable: false
+    }
+  });
+
+  return el
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.riot_csp.tag" id="apidoc.element.riot.riot_csp.tag">
+        function <span class="apidocSignatureSpan">riot.riot_csp.</span>tag
+        <span class="apidocSignatureSpan">(name, tmpl, css, attrs, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tag$1(name, tmpl, css, attrs, fn) {
+  if (isFunction(attrs)) {
+    fn = attrs;
+
+    if (/^[\w\-]+\s?=/.test(css)) {
+      attrs = css;
+      css = '';
+    } else
+      { attrs = ''; }
+  }
+
+  if (css) {
+    if (isFunction(css))
+      { fn = css; }
+    else
+      { styleManager.add(css); }
+  }
+
+  name = name.toLowerCase();
+  __TAG_IMPL[name] = { name: name, tmpl: tmpl, attrs: attrs, fn: fn };
+
+  return name
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.riot_csp.tag2" id="apidoc.element.riot.riot_csp.tag2">
+        function <span class="apidocSignatureSpan">riot.riot_csp.</span>tag2
+        <span class="apidocSignatureSpan">(name, tmpl, css, attrs, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tag2$1(name, tmpl, css, attrs, fn) {
+  if (css) { styleManager.add(css, name); }
+
+  __TAG_IMPL[name] = { name: name, tmpl: tmpl, attrs: attrs, fn: fn };
+
+  return name
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.riot_csp.unregister" id="apidoc.element.riot.riot_csp.unregister">
+        function <span class="apidocSignatureSpan">riot.riot_csp.</span>unregister
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unregister$1(name) {
+  delete __TAG_IMPL[name];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.riot_csp.update" id="apidoc.element.riot.riot_csp.update">
+        function <span class="apidocSignatureSpan">riot.riot_csp.</span>update
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function update$1() {
+  return each(__TAGS_CACHE, function (tag) { return tag.update(); })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&lt;timer&gt;
+
+&lt;p&gt;Seconds Elapsed: { time }&lt;/p&gt;
+
+this.time = opts.start || 0
+
+tick() {
+  this.<span class="apidocCodeKeywordSpan">update</span>({ time: ++this.time })
+}
+
+var timer = setInterval(this.tick, 1000)
+
+this.on('unmount', function() {
+  clearInterval(timer)
+})
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.util" id="apidoc.module.riot.util">module riot.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.brackets" id="apidoc.element.riot.util.brackets">
+        function <span class="apidocSignatureSpan">riot.util.</span>brackets
+        <span class="apidocSignatureSpan">(reOrIdx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _brackets(reOrIdx) {
+  return reOrIdx instanceof RegExp ? _regex(reOrIdx) : _cache[reOrIdx]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tmpl" id="apidoc.element.riot.util.tmpl">
+        function <span class="apidocSignatureSpan">riot.util.</span>tmpl
+        <span class="apidocSignatureSpan">(str, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _tmpl(str, data) {
+  if (!str) { return str }
+
+  return (_cache[str] || (_cache[str] = _create(str))).call(data, _logErr)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.util.brackets" id="apidoc.module.riot.util.brackets">module riot.util.brackets</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.brackets.brackets" id="apidoc.element.riot.util.brackets.brackets">
+        function <span class="apidocSignatureSpan">riot.util.</span>brackets
+        <span class="apidocSignatureSpan">(reOrIdx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _brackets(reOrIdx) {
+  return reOrIdx instanceof RegExp ? _regex(reOrIdx) : _cache[reOrIdx]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.brackets.array" id="apidoc.element.riot.util.brackets.array">
+        function <span class="apidocSignatureSpan">riot.util.brackets.</span>array
+        <span class="apidocSignatureSpan">(pair)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function array(pair) {
+  return pair ? _create(pair) : _cache
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.brackets.hasExpr" id="apidoc.element.riot.util.brackets.hasExpr">
+        function <span class="apidocSignatureSpan">riot.util.brackets.</span>hasExpr
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasExpr(str) {
+  return _cache[4].test(str)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var RefExpr = {
+init: function init(dom, parent, attrName, attrValue) {
+  this.dom = dom;
+  this.attr = attrName;
+  this.rawValue = attrValue;
+  this.parent = parent;
+  this.hasExp = csp_tmpl_1.<span class="apidocCodeKeywordSpan">hasExpr</span>(attrValue);
+  return this
+},
+update: function update() {
+  var old = this.value;
+  var customParent = this.parent &amp;&amp; getImmediateCustomParentTag(this.parent);
+  // if the referenced element is a custom tag, then we set the tag itself, rather than DOM
+  var tagOrDom = this.tag || this.dom;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.brackets.loopKeys" id="apidoc.element.riot.util.brackets.loopKeys">
+        function <span class="apidocSignatureSpan">riot.util.brackets.</span>loopKeys
+        <span class="apidocSignatureSpan">(expr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loopKeys(expr) {
+  var m = expr.match(_cache[9]);
+
+  return m
+    ? { key: m[1], pos: m[2], val: _cache[0] + m[3].trim() + _cache[1] }
+    : { val: expr.trim() }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  oldItems = [],
+  hasKeys,
+  isLoop = true,
+  isAnonymous = !__TAG_IMPL[tagName],
+  isVirtual = dom.tagName === 'VIRTUAL';
+
+// parse the each expression
+expr = csp_tmpl_1.<span class="apidocCodeKeywordSpan">loopKeys</span>(expr);
+expr.isLoop = true;
+
+if (ifExpr) { remAttr(dom, CONDITIONAL_DIRECTIVE); }
+
+// insert a marked where the loop tags will be injected
+parentNode.insertBefore(placeholder, dom);
+parentNode.removeChild(dom);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.brackets.set" id="apidoc.element.riot.util.brackets.set">
+        function <span class="apidocSignatureSpan">riot.util.brackets.</span>set
+        <span class="apidocSignatureSpan">(pair)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _reset(pair) {
+  if ((pair || (pair = DEFAULT)) !== _cache[8]) {
+    _cache = _create(pair);
+    _regex = pair === DEFAULT ? _loopback : _rewrite;
+    _cache[9] = _regex(_pairs[9]);
+  }
+  cachedBrackets = pair;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.brackets.split" id="apidoc.element.riot.util.brackets.split">
+        function <span class="apidocSignatureSpan">riot.util.brackets.</span>split
+        <span class="apidocSignatureSpan">(str, tmpl, _bp)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function split(str, tmpl, _bp) {
+  // istanbul ignore next: _bp is for the compiler
+  if (!_bp) { _bp = _cache; }
+
+  var
+    parts = [],
+    match,
+    isexpr,
+    start,
+    pos,
+    re = _bp[6];
+
+  isexpr = start = re.lastIndex = 0;
+
+  while ((match = re.exec(str))) {
+
+    pos = match.index;
+
+    if (isexpr) {
+
+      if (match[2]) {
+        re.lastIndex = skipBraces(str, match[2], re.lastIndex);
+        continue
+      }
+      if (!match[3]) {
+        continue
+      }
+    }
+
+    if (!match[1]) {
+      unescapeStr(str.slice(start, pos));
+      start = re.lastIndex;
+      re = _bp[6 + (isexpr ^= 1)];
+      re.lastIndex = start;
+    }
+  }
+
+  if (str &amp;&amp; start &lt; str.length) {
+    unescapeStr(str.slice(start));
+  }
+
+  return parts
+
+  function unescapeStr (s) {
+    if (tmpl || isexpr) {
+      parts.push(s &amp;&amp; s.replace(_bp[5], '$1'));
+    } else {
+      parts.push(s);
+    }
+  }
+
+  function skipBraces (s, ch, ix) {
+    var
+      match,
+      recch = FINDBRACES[ch];
+
+    recch.lastIndex = ix;
+    ix = 1;
+    while ((match = recch.exec(s))) {
+      if (match[1] &amp;&amp;
+        !(match[1] === ch ? ++ix : --ix)) { break }
+    }
+    return ix ? s.length : recch.lastIndex
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  re.source.replace(/{/g, bp[2]).replace(/}/g, bp[3]), re.global ? REGLOB : ''
+)
+  }
+
+  function _create (pair) {
+if (pair === DEFAULT) { return _pairs }
+
+var arr = pair.<span class="apidocCodeKeywordSpan">split</span>(' ');
+
+if (arr.length !== 2 || UNSUPPORTED.test(pair)) {
+  throw new Error('Unsupported brackets "' + pair + '"')
+}
+arr = arr.concat(pair.replace(NEED_ESCAPE, '\\').split(' '));
+
+arr[4] = _rewrite(arr[1].length &gt; 1 ? /{[\S\s]*?}/ : _pairs[4], arr);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.util.check" id="apidoc.module.riot.util.check">module riot.util.check</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.check.isArray" id="apidoc.element.riot.util.check.isArray">
+        function <span class="apidocSignatureSpan">riot.util.check.</span>isArray
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArray(value) {
+  return Array.isArray(value) || value instanceof Array
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+* Check if passed argument is a kind of array
+* @param   { * } value -
+* @returns { Boolean } -
+*/
+function isArray(value) {
+ return Array.<span class="apidocCodeKeywordSpan">isArray</span>(value) || value instanceof Array
+}
+
+/**
+* Check whether object's property could be overridden
+* @param   { Object }  obj - source object
+* @param   { String }  key - object property
+* @returns { Boolean } -
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.check.isBlank" id="apidoc.element.riot.util.check.isBlank">
+        function <span class="apidocSignatureSpan">riot.util.check.</span>isBlank
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isBlank(value) {
+  return isUndefined(value) || value === null || value === ''
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.check.isBoolAttr" id="apidoc.element.riot.util.check.isBoolAttr">
+        function <span class="apidocSignatureSpan">riot.util.check.</span>isBoolAttr
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isBoolAttr(value) {
+  return RE_BOOL_ATTRS.test(value)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.check.isFunction" id="apidoc.element.riot.util.check.isFunction">
+        function <span class="apidocSignatureSpan">riot.util.check.</span>isFunction
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isFunction(value) {
+  return typeof value === T_FUNCTION
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.check.isObject" id="apidoc.element.riot.util.check.isObject">
+        function <span class="apidocSignatureSpan">riot.util.check.</span>isObject
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isObject(value) {
+  return value &amp;&amp; typeof value === T_OBJECT // typeof null is 'object'
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.check.isReservedName" id="apidoc.element.riot.util.check.isReservedName">
+        function <span class="apidocSignatureSpan">riot.util.check.</span>isReservedName
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isReservedName(value) {
+  return RE_RESERVED_NAMES.test(value)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.check.isString" id="apidoc.element.riot.util.check.isString">
+        function <span class="apidocSignatureSpan">riot.util.check.</span>isString
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isString(value) {
+  return typeof value === T_STRING
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.check.isUndefined" id="apidoc.element.riot.util.check.isUndefined">
+        function <span class="apidocSignatureSpan">riot.util.check.</span>isUndefined
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isUndefined(value) {
+  return typeof value === T_UNDEF
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.check.isWritable" id="apidoc.element.riot.util.check.isWritable">
+        function <span class="apidocSignatureSpan">riot.util.check.</span>isWritable
+        <span class="apidocSignatureSpan">(obj, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isWritable(obj, key) {
+  var descriptor = Object.getOwnPropertyDescriptor(obj, key);
+  return isUndefined(obj[key]) || descriptor &amp;&amp; descriptor.writable
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.util.dom" id="apidoc.module.riot.util.dom">module riot.util.dom</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.createDOMPlaceholder" id="apidoc.element.riot.util.dom.createDOMPlaceholder">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>createDOMPlaceholder
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDOMPlaceholder() {
+  return document.createTextNode('')
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.createFrag" id="apidoc.element.riot.util.dom.createFrag">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>createFrag
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createFrag() {
+  return document.createDocumentFragment()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.getAttr" id="apidoc.element.riot.util.dom.getAttr">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>getAttr
+        <span class="apidocSignatureSpan">(dom, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getAttr(dom, name) {
+  return dom.getAttribute(name)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.mkEl" id="apidoc.element.riot.util.dom.mkEl">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>mkEl
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mkEl(name) {
+  return document.createElement(name)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.remAttr" id="apidoc.element.riot.util.dom.remAttr">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>remAttr
+        <span class="apidocSignatureSpan">(dom, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function remAttr(dom, name) {
+  dom.removeAttribute(name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.safeInsert" id="apidoc.element.riot.util.dom.safeInsert">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>safeInsert
+        <span class="apidocSignatureSpan">(root, curr, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function safeInsert(root, curr, next) {
+  root.insertBefore(curr, next.parentNode &amp;&amp; next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.setAttr" id="apidoc.element.riot.util.dom.setAttr">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>setAttr
+        <span class="apidocSignatureSpan">(dom, name, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setAttr(dom, name, val) {
+  var xlink = XLINK_REGEX.exec(name);
+  if (xlink &amp;&amp; xlink[1])
+    { dom.setAttributeNS(XLINK_NS, xlink[1], val); }
+  else
+    { dom.setAttribute(name, val); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.setInnerHTML" id="apidoc.element.riot.util.dom.setInnerHTML">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>setInnerHTML
+        <span class="apidocSignatureSpan">(container, html)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setInnerHTML(container, html) {
+  if (!isUndefined(container.innerHTML))
+    { container.innerHTML = html; }
+    // some browsers do not support innerHTML on the SVGs tags
+  else {
+    var doc = new DOMParser().parseFromString(html, 'application/xml');
+    var node = container.ownerDocument.importNode(doc.documentElement, true);
+    container.appendChild(node);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.styleObjectToString" id="apidoc.element.riot.util.dom.styleObjectToString">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>styleObjectToString
+        <span class="apidocSignatureSpan">(style)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function styleObjectToString(style) {
+  return Object.keys(style).reduce(function (acc, prop) {
+    return (acc + " " + prop + ": " + (style[prop]) + ";")
+  }, '')
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.toggleVisibility" id="apidoc.element.riot.util.dom.toggleVisibility">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>toggleVisibility
+        <span class="apidocSignatureSpan">(dom, show)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toggleVisibility(dom, show) {
+  dom.style.display = show ? '' : 'none';
+  dom['hidden'] = show ? false : true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.walkAttrs" id="apidoc.element.riot.util.dom.walkAttrs">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>walkAttrs
+        <span class="apidocSignatureSpan">(html, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function walkAttrs(html, fn) {
+  if (!html)
+    { return }
+  var m;
+  while (m = RE_HTML_ATTRS.exec(html))
+    { fn(m[1].toLowerCase(), m[2] || m[3] || m[4]); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.dom.walkNodes" id="apidoc.element.riot.util.dom.walkNodes">
+        function <span class="apidocSignatureSpan">riot.util.dom.</span>walkNodes
+        <span class="apidocSignatureSpan">(dom, fn, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function walkNodes(dom, fn, context) {
+  if (dom) {
+    var res = fn(dom, context);
+    var next;
+    // stop the recursion
+    if (res === false) { return }
+
+    dom = dom.firstChild;
+
+    while (dom) {
+      next = dom.nextSibling;
+      walkNodes(dom, fn, res);
+      dom = next;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.util.misc" id="apidoc.module.riot.util.misc">module riot.util.misc</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.misc.contains" id="apidoc.element.riot.util.misc.contains">
+        function <span class="apidocSignatureSpan">riot.util.misc.</span>contains
+        <span class="apidocSignatureSpan">(array, item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function contains(array, item) {
+  return array.indexOf(item) !== -1
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.misc.defineProperty" id="apidoc.element.riot.util.misc.defineProperty">
+        function <span class="apidocSignatureSpan">riot.util.misc.</span>defineProperty
+        <span class="apidocSignatureSpan">(el, key, value, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defineProperty(el, key, value, options) {
+  Object.defineProperty(el, key, extend({
+    value: value,
+    enumerable: false,
+    writable: false,
+    configurable: true
+  }, options));
+  return el
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var error = new Error(msg);
+    try {
+        throw error;
+    } catch (base) {
+        /* istanbul ignore else */
+        if (Object.create &amp;&amp; Object.defineProperty) {
+            error = Object.create(base);
+            Object.<span class="apidocCodeKeywordSpan">defineProperty</span>(error, 'column', { value: column });
+        }
+    } finally {
+        return error;
+    }
+}
+
+function createError(line, pos, description) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.misc.each" id="apidoc.element.riot.util.misc.each">
+        function <span class="apidocSignatureSpan">riot.util.misc.</span>each
+        <span class="apidocSignatureSpan">(list, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function each(list, fn) {
+  var len = list ? list.length : 0;
+  var i = 0;
+  for (; i &lt; len; ++i) {
+    fn(list[i], i);
+  }
+  return list
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.misc.extend" id="apidoc.element.riot.util.misc.extend">
+        function <span class="apidocSignatureSpan">riot.util.misc.</span>extend
+        <span class="apidocSignatureSpan">(src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(src) {
+  var obj, args = arguments;
+  for (var i = 1; i &lt; args.length; ++i) {
+    if (obj = args[i]) {
+      for (var key in obj) {
+        // check if this property of the source object could be overridden
+        if (isWritable(src, key))
+          { src[key] = obj[key]; }
+      }
+    }
+  }
+  return src
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.misc.startsWith" id="apidoc.element.riot.util.misc.startsWith">
+        function <span class="apidocSignatureSpan">riot.util.misc.</span>startsWith
+        <span class="apidocSignatureSpan">(str, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startsWith(str, value) {
+  return str.slice(0, value.length) === value
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.misc.toCamel" id="apidoc.element.riot.util.misc.toCamel">
+        function <span class="apidocSignatureSpan">riot.util.misc.</span>toCamel
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toCamel(str) {
+  return str.replace(/-(\w)/g, function (_, c) { return c.toUpperCase(); })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.util.styleManager" id="apidoc.module.riot.util.styleManager">module riot.util.styleManager</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.styleManager.add" id="apidoc.element.riot.util.styleManager.add">
+        function <span class="apidocSignatureSpan">riot.util.styleManager.</span>add
+        <span class="apidocSignatureSpan">(css, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function add(css, name) {
+  if (name) { byName[name] = css; }
+  else { remainder.push(css); }
+  needsInject = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      { attrs = ''; }
+  }
+
+  if (css) {
+    if (isFunction(css))
+      { fn = css; }
+    else
+      { styleManager.<span class="apidocCodeKeywordSpan">add</span>(css); }
+  }
+
+  name = name.toLowerCase();
+  __TAG_IMPL[name] = { name: name, tmpl: tmpl, attrs: attrs, fn: fn };
+
+  return name
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.styleManager.inject" id="apidoc.element.riot.util.styleManager.inject">
+        function <span class="apidocSignatureSpan">riot.util.styleManager.</span>inject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inject() {
+  if (!WIN || !needsInject) { return }
+  needsInject = false;
+  var style = Object.keys(byName)
+    .map(function(k) { return byName[k] })
+    .concat(remainder).join('\n');
+<span class="apidocCodeCommentSpan">  /* istanbul ignore next */
+</span>  if (cssTextProp) { cssTextProp.cssText = style; }
+  else { styleNode.innerHTML = style; }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   // cache the class constructor
+   __TAG_IMPL[name].class = this.constructor;
+ }
+
+ // mount the tag using the class instance
+ mountTo(el, name, opts, this);
+ // inject the component css
+ if (css) { styleManager.<span class="apidocCodeKeywordSpan">inject</span>(); }
+
+ return this
+}
+
+/**
+* Create a new riot tag implementation
+* @param   { String }   name - name/id of the new riot tag
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.util.tags" id="apidoc.module.riot.util.tags">module riot.util.tags</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.arrayishAdd" id="apidoc.element.riot.util.tags.arrayishAdd">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>arrayishAdd
+        <span class="apidocSignatureSpan">(obj, key, value, ensureArray, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function arrayishAdd(obj, key, value, ensureArray, index) {
+  var dest = obj[key];
+  var isArr = isArray(dest);
+  var hasIndex = !isUndefined(index);
+
+  if (dest &amp;&amp; dest === value) { return }
+
+  // if the key was never set, set it once
+  if (!dest &amp;&amp; ensureArray) { obj[key] = [value]; }
+  else if (!dest) { obj[key] = value; }
+  // if it was an array and not yet set
+  else {
+    if (isArr) {
+      var oldIndex = dest.indexOf(value);
+      // this item never changed its position
+      if (oldIndex === index) { return }
+      // remove the item from its old position
+      if (oldIndex !== -1) { dest.splice(oldIndex, 1); }
+      // move or add the item
+      if (hasIndex) {
+        dest.splice(index, 0, value);
+      } else {
+        dest.push(value);
+      }
+    } else { obj[key] = [dest, value]; }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.arrayishRemove" id="apidoc.element.riot.util.tags.arrayishRemove">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>arrayishRemove
+        <span class="apidocSignatureSpan">(obj, key, value, ensureArray)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function arrayishRemove(obj, key, value, ensureArray) {
+  if (isArray(obj[key])) {
+    var index = obj[key].indexOf(value);
+    if (index !== -1) { obj[key].splice(index, 1); }
+    if (!obj[key].length) { delete obj[key]; }
+    else if (obj[key].length === 1 &amp;&amp; !ensureArray) { obj[key] = obj[key][0]; }
+  } else
+    { delete obj[key]; } // otherwise just delete the key
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.cleanUpData" id="apidoc.element.riot.util.tags.cleanUpData">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>cleanUpData
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cleanUpData(data) {
+  if (!(data instanceof Tag$1) &amp;&amp; !(data &amp;&amp; isFunction(data.trigger)))
+    { return data }
+
+  var o = {};
+  for (var key in data) {
+    if (!RE_RESERVED_NAMES.test(key)) { o[key] = data[key]; }
+  }
+  return o
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.getImmediateCustomParentTag" id="apidoc.element.riot.util.tags.getImmediateCustomParentTag">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>getImmediateCustomParentTag
+        <span class="apidocSignatureSpan">(tag)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getImmediateCustomParentTag(tag) {
+  var ptag = tag;
+  while (ptag.__.isAnonymous) {
+    if (!ptag.parent) { break }
+    ptag = ptag.parent;
+  }
+  return ptag
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.getTag" id="apidoc.element.riot.util.tags.getTag">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>getTag
+        <span class="apidocSignatureSpan">(dom)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getTag(dom) {
+  return dom.tagName &amp;&amp; __TAG_IMPL[getAttr(dom, IS_DIRECTIVE) ||
+    getAttr(dom, IS_DIRECTIVE) || dom.tagName.toLowerCase()]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.getTagName" id="apidoc.element.riot.util.tags.getTagName">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>getTagName
+        <span class="apidocSignatureSpan">(dom, skipDataIs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getTagName(dom, skipDataIs) {
+  var child = getTag(dom),
+    namedTag = !skipDataIs &amp;&amp; getAttr(dom, IS_DIRECTIVE);
+  return namedTag &amp;&amp; !tmpl.hasExpr(namedTag) ?
+                namedTag :
+              child ? child.name : dom.tagName.toLowerCase()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.inheritFrom" id="apidoc.element.riot.util.tags.inheritFrom">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>inheritFrom
+        <span class="apidocSignatureSpan">(target, propsInSyncWithParent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inheritFrom(target, propsInSyncWithParent) {
+  var this$1 = this;
+
+  each(Object.keys(target), function (k) {
+    // some properties must be always in sync with the parent tag
+    var mustSync = !isReservedName(k) &amp;&amp; contains(propsInSyncWithParent, k);
+
+    if (isUndefined(this$1[k]) || mustSync) {
+      // track the property to keep in sync
+      // so we can keep it updated
+      if (!mustSync) { propsInSyncWithParent.push(k); }
+      this$1[k] = target[k];
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.initChildTag" id="apidoc.element.riot.util.tags.initChildTag">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>initChildTag
+        <span class="apidocSignatureSpan">(child, opts, innerHTML, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initChildTag(child, opts, innerHTML, parent) {
+  var tag = new Tag$1(child, opts, innerHTML),
+    tagName = opts.tagName || getTagName(opts.root, true),
+    ptag = getImmediateCustomParentTag(parent);
+  // fix for the parent attribute in the looped elements
+  defineProperty(tag, 'parent', ptag);
+  // store the real parent tag
+  // in some cases this could be different from the custom parent tag
+  // for example in nested loops
+  tag.__.parent = parent;
+
+  // add this tag to the custom parent tag
+  arrayishAdd(ptag.tags, tagName, tag);
+
+  // and also to the real parent tag
+  if (ptag !== parent)
+    { arrayishAdd(parent.tags, tagName, tag); }
+
+  // empty the child node once we got its template
+  // to avoid that its children get compiled multiple times
+  opts.root.innerHTML = '';
+
+  return tag
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.makeReplaceVirtual" id="apidoc.element.riot.util.tags.makeReplaceVirtual">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>makeReplaceVirtual
+        <span class="apidocSignatureSpan">(tag, ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function makeReplaceVirtual(tag, ref) {
+  var frag = createFrag();
+  makeVirtual.call(tag, frag);
+  ref.parentNode.replaceChild(frag, ref);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.makeVirtual" id="apidoc.element.riot.util.tags.makeVirtual">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>makeVirtual
+        <span class="apidocSignatureSpan">(src, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function makeVirtual(src, target) {
+  var this$1 = this;
+
+  var head = createDOMPlaceholder(),
+    tail = createDOMPlaceholder(),
+    frag = createFrag(),
+    sib, el;
+
+  this.root.insertBefore(head, this.root.firstChild);
+  this.root.appendChild(tail);
+
+  this.__.head = el = head;
+  this.__.tail = tail;
+
+  while (el) {
+    sib = el.nextSibling;
+    frag.appendChild(el);
+    this$1.__.virts.push(el); // hold for unmounting
+    el = sib;
+  }
+
+  if (target)
+    { src.insertBefore(frag, target.__.head); }
+  else
+    { src.appendChild(frag); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.mountTo" id="apidoc.element.riot.util.tags.mountTo">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>mountTo
+        <span class="apidocSignatureSpan">(root, tagName, opts, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mountTo(root, tagName, opts, ctx) {
+  var impl = __TAG_IMPL[tagName],
+    implClass = __TAG_IMPL[tagName].class,
+    tag = ctx || (implClass ? Object.create(implClass.prototype) : {}),
+    // cache the inner HTML to fix #855
+    innerHTML = root._innerHTML = root._innerHTML || root.innerHTML;
+
+  // clear the inner html
+  root.innerHTML = '';
+
+  var conf = extend({ root: root, opts: opts }, { parent: opts ? opts.parent : null });
+
+  if (impl &amp;&amp; root) { Tag$1.apply(tag, [impl, conf, innerHTML]); }
+
+  if (tag &amp;&amp; tag.mount) {
+    tag.mount(true);
+    // add this tag to the virtualDom variable
+    if (!contains(__TAGS_CACHE, tag)) { __TAGS_CACHE.push(tag); }
+  }
+
+  return tag
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.moveChildTag" id="apidoc.element.riot.util.tags.moveChildTag">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>moveChildTag
+        <span class="apidocSignatureSpan">(tagName, newPos)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function moveChildTag(tagName, newPos) {
+  var parent = this.parent,
+    tags;
+  // no parent no move
+  if (!parent) { return }
+
+  tags = parent.tags[tagName];
+
+  if (isArray(tags))
+    { tags.splice(newPos, 0, tags.splice(tags.indexOf(this), 1)[0]); }
+  else { arrayishAdd(parent.tags, tagName, this); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.moveVirtual" id="apidoc.element.riot.util.tags.moveVirtual">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>moveVirtual
+        <span class="apidocSignatureSpan">(src, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function moveVirtual(src, target) {
+  var this$1 = this;
+
+  var el = this.__.head,
+    frag = createFrag(),
+    sib;
+
+  while (el) {
+    sib = el.nextSibling;
+    frag.appendChild(el);
+    el = sib;
+    if (el === this$1.__.tail) {
+      frag.appendChild(el);
+      src.insertBefore(frag, target.__.head);
+      break
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.selectTags" id="apidoc.element.riot.util.tags.selectTags">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>selectTags
+        <span class="apidocSignatureSpan">(tags)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function selectTags(tags) {
+  // select all tags
+  if (!tags) {
+    var keys = Object.keys(__TAG_IMPL);
+    return keys + selectTags(keys)
+  }
+
+  return tags
+    .filter(function (t) { return !/[^-\w]/.test(t); })
+    .reduce(function (list, t) {
+      var name = t.trim().toLowerCase();
+      return list + ",[" + IS_DIRECTIVE + "=\"" + name + "\"]"
+    }, '')
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tags.unmountAll" id="apidoc.element.riot.util.tags.unmountAll">
+        function <span class="apidocSignatureSpan">riot.util.tags.</span>unmountAll
+        <span class="apidocSignatureSpan">(expressions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unmountAll(expressions) {
+  each(expressions, function(expr) {
+    if (expr instanceof Tag$1) { expr.unmount(true); }
+    else if (expr.unmount) { expr.unmount(); }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.riot.util.tmpl" id="apidoc.module.riot.util.tmpl">module riot.util.tmpl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tmpl.tmpl" id="apidoc.element.riot.util.tmpl.tmpl">
+        function <span class="apidocSignatureSpan">riot.util.</span>tmpl
+        <span class="apidocSignatureSpan">(str, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _tmpl(str, data) {
+  if (!str) { return str }
+
+  return (_cache[str] || (_cache[str] = _create(str))).call(data, _logErr)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tmpl.clearCache" id="apidoc.element.riot.util.tmpl.clearCache">
+        function <span class="apidocSignatureSpan">riot.util.tmpl.</span>clearCache
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearCache = function () { _cache = {}; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tmpl.hasExpr" id="apidoc.element.riot.util.tmpl.hasExpr">
+        function <span class="apidocSignatureSpan">riot.util.tmpl.</span>hasExpr
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasExpr(str) {
+  return _cache[4].test(str)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var RefExpr = {
+init: function init(dom, parent, attrName, attrValue) {
+  this.dom = dom;
+  this.attr = attrName;
+  this.rawValue = attrValue;
+  this.parent = parent;
+  this.hasExp = csp_tmpl_1.<span class="apidocCodeKeywordSpan">hasExpr</span>(attrValue);
+  return this
+},
+update: function update() {
+  var old = this.value;
+  var customParent = this.parent &amp;&amp; getImmediateCustomParentTag(this.parent);
+  // if the referenced element is a custom tag, then we set the tag itself, rather than DOM
+  var tagOrDom = this.tag || this.dom;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.riot.util.tmpl.loopKeys" id="apidoc.element.riot.util.tmpl.loopKeys">
+        function <span class="apidocSignatureSpan">riot.util.tmpl.</span>loopKeys
+        <span class="apidocSignatureSpan">(expr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loopKeys(expr) {
+  var m = expr.match(_cache[9]);
+
+  return m
+    ? { key: m[1], pos: m[2], val: _cache[0] + m[3].trim() + _cache[1] }
+    : { val: expr.trim() }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  oldItems = [],
+  hasKeys,
+  isLoop = true,
+  isAnonymous = !__TAG_IMPL[tagName],
+  isVirtual = dom.tagName === 'VIRTUAL';
+
+// parse the each expression
+expr = csp_tmpl_1.<span class="apidocCodeKeywordSpan">loopKeys</span>(expr);
+expr.isLoop = true;
+
+if (ifExpr) { remAttr(dom, CONDITIONAL_DIRECTIVE); }
+
+// insert a marked where the loop tags will be injected
+parentNode.insertBefore(placeholder, dom);
+parentNode.removeChild(dom);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
