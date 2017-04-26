@@ -1,6 +1,6 @@
 # npmdoc-riot
 
-#### api documentation for  [riot (v3.4.2)](http://riotjs.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-riot.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-riot) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-riot.svg)](https://travis-ci.org/npmdoc/node-npmdoc-riot)
+#### basic api documentation for  [riot (v3.4.3)](http://riotjs.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-riot.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-riot) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-riot.svg)](https://travis-ci.org/npmdoc/node-npmdoc-riot)
 
 #### A React-like user interface micro-library
 
@@ -91,8 +91,8 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "681b6bc2869073d88512a3b6db33cdc8dedb0e8c",
-        "tarball": "https://registry.npmjs.org/riot/-/riot-3.4.2.tgz"
+        "shasum": "5a3fd4023d121303b3911d7ab229a1524edc6318",
+        "tarball": "https://registry.npmjs.org/riot/-/riot-3.4.3.tgz"
     },
     "engines": {
         "node": ">=4.0.0"
@@ -106,7 +106,7 @@
         "riot+compiler.js",
         "riot+compiler.min.js"
     ],
-    "gitHead": "d6f081cbc0a9849e0cc0473fd33618ab40704686",
+    "gitHead": "615c192a38dbe804e2df4af25009f06284c03f42",
     "homepage": "http://riotjs.com/",
     "jsnext:main": "lib/riot.js",
     "keywords": [
@@ -160,7 +160,7 @@
     "scripts": {
         "test": "make riot"
     },
-    "version": "3.4.2"
+    "version": "3.4.3"
 }
 ```
 
